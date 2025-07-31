@@ -1,20 +1,11 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import { Ionicons } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
+import { StyleSheet, Text, View, Image } from 'react-native';
+import Header from '../components/header';
 
 export default function ProfileScreen() {
-  const navigation = useNavigation();
-
   return (
     <View style={styles.container}>
-      <TouchableOpacity
-        style={styles.menuButton}
-        onPress={() => navigation.openDrawer()}
-      >
-        <Ionicons name="menu" size={24} color="#333" />
-      </TouchableOpacity>
-
+      <Header />
       <View style={styles.profileHeader}>
         <Image
           source={{ uri: 'https://via.placeholder.com/100' }}
@@ -33,14 +24,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#f8f8f8',
     alignItems: 'center',
   },
-  menuButton: {
-    padding: 20,
-    alignSelf: 'flex-start',
-  },
   profileHeader: {
     alignItems: 'center',
     justifyContent: 'center',
-    // padding: 20,
     backgroundColor: '#fff',
     width: '100%',
     height: 200,
