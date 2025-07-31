@@ -28,6 +28,18 @@ export default function Layout() {
           ),
         }}
       />
+      <Drawer.Screen
+        name="contact"
+        options={{
+          drawerLabel: 'Contato',
+          title: 'Contato',
+          headerShown: false,
+          headerLeft: true,
+          drawerIcon: ({ size, color }) => (
+            <Ionicons name="person" size={size} color={color} />
+          ),
+        }}
+      />
     </Drawer>
   );
 }
